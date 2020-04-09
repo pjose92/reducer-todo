@@ -59,7 +59,7 @@ function App() {
                     <h4>{todo.title}</h4>
                     <div className="meta">
                       <span>due {todo.due.endOf("day").fromNow()}</span>
-                      {todo.due < moment() && !todo.completed ? (
+                      {todo.due < moment(Date.now()).format('lll') && !todo.completed ? (
                         <span>past due</span>
                       ) : null}
                     </div>
@@ -67,7 +67,7 @@ function App() {
               ))}
             </ul>
             {total !== 0 ? (
-              <div>
+              <div className="clear-button">
                 <button onClick={clearCompleted}>Clear Completed Items</button>
               </div>
             ) : null}

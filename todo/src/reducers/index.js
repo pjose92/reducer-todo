@@ -3,31 +3,25 @@ import moment from "moment";
 export const INITIAL_STATE = {
     toDoList: [
         {
-            id: 1,
-            title: "Walk Millie",
+            id: 123,
+            title: "Learn about reducers",
             completed: false,
             due: moment().add(1, "days")
         },
         {
-            id: 2,
-            title: "Feed Millie",
+            id: 234,
+            title: "Start on project",
             completed: false,
-            due: moment().add(1, "days")
+            due: moment().subtract(1, "days")
         },
         {
-            id: 3,
-            title: "Play with Millie",
+            id: 3456,
+            title: "Finish reducer project",
             completed: false,
             due: moment().add(1, "days")
-        },
-        {
-            id: 4,
-            title: "Make Coffee",
-            completed: false,
-            due: moment().add(1, "weeks")
         },
     ],
-    total: 4
+    total: 3
 };
 
 export const reducer = (state, action) => {
